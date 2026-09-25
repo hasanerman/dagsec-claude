@@ -1,0 +1,45 @@
+{
+  "name": "dagsec",
+  "version": "1.0.0",
+  "description": "Stops Claude Code from installing packages that don't exist or have critical vulnerabilities, and lets it check any npm, PyPI or crates.io package before adding it.",
+  "author": {
+    "name": "dagsec",
+    "email": "hello@dagsec.net",
+    "url": "https://dagsec.net"
+  },
+  "homepage": "https://dagsec.net",
+  "keywords": [
+    "security",
+    "supply-chain",
+    "dependencies",
+    "vulnerabilities",
+    "npm",
+    "pypi",
+    "crates"
+  ],
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "dagsec API key",
+      "description": "Create one at https://app.dagsec.net/keys (starts with dgs_).",
+      "required": true,
+      "sensitive": true
+    },
+    "mode": {
+      "type": "string",
+      "title": "When an install is risky",
+      "description": "block: stop the install and tell Claude why. warn: ask you before it runs.",
+      "default": "block"
+    }
+  },
+  "mcpServers": {
+    "dagsec": {
+      "type": "http",
+      "url": "https://app.dagsec.net/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.api_key}",
+        "X-Dagsec-Mode": "${user_config.mode}"
+      }
+    }
+  }
+}

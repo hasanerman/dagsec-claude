@@ -1,0 +1,377 @@
+{
+  "description": "Checks packages with dagsec before an install command runs.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "if": "Bash(npm install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(npm i *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(npm add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(yarn add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(pnpm add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(pnpm install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(pnpm i *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(bun add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(bun install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(pip install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(pip3 install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(python -m pip install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(python3 -m pip install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(uv add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(uv pip install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(poetry add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(pdm add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(cargo add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "PowerShell",
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(npm install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(npm i *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(npm add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(yarn add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(pnpm add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(pnpm install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(pnpm i *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(bun add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(bun install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(pip install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(pip3 install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(python -m pip install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(python3 -m pip install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(uv add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(uv pip install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(poetry add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(pdm add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(cargo add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

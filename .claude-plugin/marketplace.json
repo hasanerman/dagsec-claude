@@ -1,0 +1,15 @@
+{
+  "name": "dagsec",
+  "description": "dagsec supply-chain security for Claude Code",
+  "owner": {
+    "name": "dagsec",
+    "email": "hello@dagsec.net"
+  },
+  "plugins": [
+    {
+      "name": "dagsec",
+      "source": "./",
+      "description": "Stops Claude Code from installing packages that don't exist or have critical vulnerabilities."
+    }
+  ]
+}
