@@ -184,6 +184,46 @@
               "command": "${tool_input.command}"
             },
             "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(go get *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(go install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(dotnet add package *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(dotnet add * package *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
           }
         ]
       },
@@ -363,6 +403,46 @@
           {
             "type": "mcp_tool",
             "if": "PowerShell(cargo add *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(go get *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(go install *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(dotnet add package *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(dotnet add * package *)",
             "server": "plugin:dagsec:dagsec",
             "tool": "check_install",
             "input": {

@@ -2,8 +2,8 @@
 
 AI coding agents install packages from memory: versions that were safe when they were trained, and sometimes names that don't exist at all. This plugin puts [dagsec](https://dagsec.net) between Claude Code and your package manager.
 
-- **Blocks risky installs.** Before `npm install`, `pip install`, `cargo add` and similar commands run, dagsec checks each package. A package that doesn't exist, or a version with critical or high vulnerabilities, is stopped and Claude is told which version to use instead.
-- **Answers "is this package safe?"** Claude can check any npm, PyPI or crates.io package: known vulnerabilities for a version, the release that fixes them, and a 0 to 100 health score.
+- **Blocks risky installs.** Before `npm install`, `pip install`, `cargo add`, `go get`, `dotnet add package` and similar commands run, dagsec checks each package. A package that doesn't exist, or a version with critical or high vulnerabilities, is stopped and Claude is told which version to use instead.
+- **Answers "is this package safe?"** Claude can check any npm, PyPI, crates.io, Go, Maven or NuGet package: known vulnerabilities for a version, the release that fixes them, and a 0 to 100 health score.
 
 ## Install
 

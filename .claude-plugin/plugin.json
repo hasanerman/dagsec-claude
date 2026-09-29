@@ -1,7 +1,7 @@
 {
   "name": "dagsec",
-  "version": "1.0.0",
-  "description": "Stops Claude Code from installing packages that don't exist or have critical vulnerabilities, and lets it check any npm, PyPI or crates.io package before adding it.",
+  "version": "1.1.0",
+  "description": "Stops Claude Code from installing packages that don't exist or have critical vulnerabilities, and lets it check any npm, PyPI, crates.io, Go, Maven or NuGet package before adding it.",
   "author": {
     "name": "dagsec",
     "email": "hello@dagsec.net",
