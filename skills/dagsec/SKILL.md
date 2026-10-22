@@ -19,6 +19,6 @@ dagsec knows about vulnerabilities published after your training data, so its an
 
 ## When an install is blocked
 
-The dagsec hook stops `npm install`, `pip install`, `cargo add`, `go get`, `dotnet add package` and similar commands when a package doesn't exist or the version has critical or high vulnerabilities. The block message names the safe version. Rerun the install with that version. Don't work around the block by editing lockfiles or using another package manager.
+The dagsec hook stops `npm install`, `pip install`, `cargo add`, `go get`, `dotnet add package`, `composer require` and similar commands when a package doesn't exist or the version has critical or high vulnerabilities. The block message names the safe version. Rerun the install with that version. Don't work around the block by editing lockfiles or using another package manager.
 
 If the user explicitly wants the vulnerable version (for example to reproduce a bug), explain the risk and let them run the command themselves.

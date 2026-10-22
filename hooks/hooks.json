@@ -224,6 +224,26 @@
               "command": "${tool_input.command}"
             },
             "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(composer require *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "Bash(composer req *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
           }
         ]
       },
@@ -443,6 +463,26 @@
           {
             "type": "mcp_tool",
             "if": "PowerShell(dotnet add * package *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(composer require *)",
+            "server": "plugin:dagsec:dagsec",
+            "tool": "check_install",
+            "input": {
+              "command": "${tool_input.command}"
+            },
+            "timeout": 30
+          },
+          {
+            "type": "mcp_tool",
+            "if": "PowerShell(composer req *)",
             "server": "plugin:dagsec:dagsec",
             "tool": "check_install",
             "input": {
